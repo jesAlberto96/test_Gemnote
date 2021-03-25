@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST GEMNOTE</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js" integrity="sha512-SuxO9djzjML6b9w9/I07IWnLnQhgyYVSpHZx0JV97kGBfTIsUYlWflyuW4ypnvhBrslz1yJ3R+S14fdCWmSmSA==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css" integrity="sha512-/zs32ZEJh+/EO2N1b0PEdoA10JkdC3zJ8L5FTiQu82LR9S/rOQNfQN7U59U9BC12swNeRAz3HSzIL2vpp4fv3w==" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link href="css/general.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="row">
+                <div class="col-md-2 col-sm-12 col-xs-12 menuContent">
+                    <div class="row">
+                        <img src="https://assets.website-files.com/5c7449f43783556baa54bd0e/5c74635c544076208bb2dd82_logo.svg" height="36" alt="" class="rounded mx-auto d-block imgMenuContent">
+                    </div>
+                    <div class="row menuTitleMain">
+                        <div id="content" class="col-md-12 col-sm-12 col-xs-12">
+                            <ul>
+                                <li class="has-sub">Ashly Wong
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="row menuOptions">
+                        <div id="content" class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="menu">
+                                <ul>
+                                    <menu-option v-for="menu in menuOptions" v-bind:title="menu.title"></menu-option>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10 col-sm-12 col-xs-12 pageContent">
+                    <div class="content contentMain">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 nameUser">
+                                <h3>Welcome to Gemnote Ashly</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <section-one></section-one>
+
+                            <section-two></section-two>
+                            
+                            <section-three v-bind:images="urlsImages" ></section-three>
+                            
+                            <section-four></section-four>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="js/general.js"></script>
+<script src="js/components.js"></script>
+<script src="js/main.js"></script>
